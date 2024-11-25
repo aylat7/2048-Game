@@ -3,8 +3,6 @@
 ## 📖 Description
 The **2048 Game** is a browser-based implementation of the classic tile-merging puzzle game. Built with **JavaScript**, **HTML**, and **CSS**, this project emphasizes clean code structure, dynamic animations, and an intuitive user interface. Players control the movement of tiles using arrow keys, merging tiles of the same value to reach the elusive **2048** tile while managing limited board space. The game automatically updates the score and ends when no valid moves remain.
 
-This repository not only provides a fun and playable version of the game but also serves as a practical example of implementing grid-based logic, animations, and responsive design in a web development project.
-
 ---
 
 ## 🎮 Game Features
@@ -39,5 +37,3 @@ This repository not only provides a fun and playable version of the game but als
 
 5. **Game Over Detection**:
    - The game checks if there are no empty cells and no possible merges, ending the game if true.
-
----
