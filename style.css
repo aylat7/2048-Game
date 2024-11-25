@@ -1,0 +1,97 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #faf8ef;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.score-container {
+    padding: 15px 25px;
+    background: #bbada0;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 15px;
+    padding: 15px;
+    background-color: #bbada0;
+    border-radius: 8px;
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.cell {
+    background-color: rgba(238, 228, 218, 0.35);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: #776e65;
+    background-color: #eee4da;
+    border-radius: 3px;
+    transition: transform 150ms ease-in-out, background-color 150ms ease-in-out;
+    animation: appear 200ms ease-in-out;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes move {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.tile[data-value="2"] { background-color: #eee4da; }
+.tile[data-value="4"] { background-color: #ede0c8; }
+.tile[data-value="8"] { background-color: #f2b179; color: #f9f6f2; }
+.tile[data-value="16"] { background-color: #f59563; color: #f9f6f2; }
+.tile[data-value="32"] { background-color: #f67c5f; color: #f9f6f2; }
+.tile[data-value="64"] { background-color: #f65e3b; color: #f9f6f2; }
+.tile[data-value="128"] { background-color: #edcf72; color: #f9f6f2; font-size: 30px; }
+.tile[data-value="256"] { background-color: #edcc61; color: #f9f6f2; font-size: 30px; }
+.tile[data-value="512"] { background-color: #edc850; color: #f9f6f2; font-size: 30px; }
+.tile[data-value="1024"] { background-color: #edc53f; color: #f9f6f2; font-size: 25px; }
+.tile[data-value="2048"] { background-color: #edc22e; color: #f9f6f2; font-size: 25px; }
